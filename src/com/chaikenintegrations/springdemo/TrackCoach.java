@@ -1,20 +1,24 @@
 package com.chaikenintegrations.springdemo;
 
 /**
- * Created by bradchaiken on 2/26/17.
+ * Created by bradchaiken on 4/5/17.
  */
-public class BaseballCoach implements Coach {
+public class TrackCoach implements Coach {
 
     private FortuneService fortuneService;
 
+    public TrackCoach() {
+        // empty constructor
+    }
+
     // constructor for dependency injection
-    public BaseballCoach(FortuneService theFortuneService) {
+    public TrackCoach(FortuneService theFortuneService) {
         fortuneService = theFortuneService;
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Spend 30 minutes in the Batting Cage";
+        return "Run a hard 5K";
     }
 
     @Override
